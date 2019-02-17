@@ -1,4 +1,4 @@
-describe('When I create MyButton.vue', () => {
+describe('When I create VueSimpleTimeline.vue', () => {
   it('should renders a button', () => {
     expect('true').toMatch('true')
   })

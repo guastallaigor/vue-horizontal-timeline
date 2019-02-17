@@ -1,9 +1,9 @@
 {
-  "name": "vue-zeit",
+  "name": "vue-simple-timeline",
   "version": "0.1.0",
   "private": false,
-  "description": "Vue Component Library that implements Zeit Design Components",
-  "homepage": "https://github.com/guastallaigor/vue-zeit#readme",
+  "description": "Just a simple timeline component made with Vue.js",
+  "homepage": "https://github.com/guastallaigor/vue-simple-timeline#readme",
   "author": "Igor Guastalla de Lima",
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -17,12 +17,13 @@
     "commitmsg": "commitlint -e"
   },
   "dependencies": {
-    "vue": "^2.6.3"
+    "vue": "^2.5.22"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.5.0",
     "@commitlint/config-conventional": "^7.5.0",
     "@storybook/addon-actions": "^4.1.0",
+    "@storybook/addon-backgrounds": "^4.1.11",
     "@storybook/addon-knobs": "^4.1.0",
     "@storybook/addon-links": "^4.1.0",
     "@storybook/addon-notes": "^4.1.0",
@@ -45,7 +46,7 @@
     "vue-template-compiler": "^2.5.21"
   },
   "bugs": {
-    "url": "https://github.com/guastallaigor/vue-zeit/issues"
+    "url": "https://github.com/guastallaigor/vue-simple-timeline/issues"
   },
   "files": [
     "src/*",
@@ -55,14 +56,16 @@
   "keywords": [
     "vue",
     "vuejs",
-    "zeit",
-    "vue-components"
+    "timeline",
+    "vue-components",
+    "vue-timeline",
+    "vue-simple-timeline"
   ],
   "license": "MIT",
-  "main": "./vue-zeit.css.js",
+  "main": "./vue-simple-timeline.css.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com:guastallaigor/vue-zeit.git"
+    "url": "https://github.com:guastallaigor/vue-simple-timeline.git"
   },
   "commitlint": {
     "extends": [

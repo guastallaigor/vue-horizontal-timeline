@@ -1,9 +1,12 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { configure } from '@storybook/vue'
+import {
+  addDecorator,
+  configure
+} from '@storybook/vue'
 
-const req = require.context('../../src/stories', true, /.stories.js$/)
+const req = require.context('../../stories', true, /.stories.js$/)
 
-function loadStories() {
+function loadStories () {
   req.keys().forEach(filename => req(filename))
 }
 
