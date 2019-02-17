@@ -2,7 +2,6 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs, boolean, object, text, number } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
-import { linkTo } from '@storybook/addon-links'
 import { withBackgrounds } from '@storybook/addon-backgrounds'
 import VueSimpleTimeline from '../src/components/VueSimpleTimeline'
 
@@ -19,7 +18,7 @@ const timelineStory = storiesOf('VueSimpleTimeline', module)
   ]))
   .addDecorator(withKnobs)
 
-timelineStory.add('with text', () => {
+timelineStory.add('Default', () => {
   const label1 = 'Object 1'
   const defaultValue1 = {
     title: 'Title example 1',
@@ -129,18 +128,18 @@ timelineStory.add('with text', () => {
       :item-unique-key="itemUniqueKey"
       :has-slot="hasSlot"
       :title-centered="titleCentered"
-      :titleAttr="titleAttr"
-      :titleClass="titleClass ? 'custom-class' : ''"
-      :titleSubstr="titleSubstr"
+      :title-attr="titleAttr"
+      :title-class="titleClass ? 'custom-class' : ''"
+      :title-substr="titleSubstr"
       :content-centered="contentCentered"
-      :contentAttr="contentAttr"
-      :contentClass="contentClass ? 'custom-class' : ''"
-      :contentSubstr="contentSubstr"
-      :minWidth="minWidth"
-      :minHeight="minHeight"
-      :timelinePadding="timelinePadding"
-      :timelineBackground="timelineBackground"
-      :lineColor="lineColor"
+      :content-attr="contentAttr"
+      :content-class="contentClass ? 'custom-class' : ''"
+      :content-substr="contentSubstr"
+      :min-width="minWidth"
+      :min-height="minHeight"
+      :timeline-padding="timelinePadding"
+      :timeline-background="timelineBackground"
+      :line-color="lineColor"
       :clickable="clickable"
       @click="action"
     >
@@ -152,23 +151,3 @@ timelineStory.add('with text', () => {
     </vue-simple-timeline>`
   }
 })
-
-timelineStory.add('with JSX', () => ({
-  components: { VueSimpleTimeline },
-  data: () => ({
-    items: [
-      {
-        title: 'Title example 1',
-        label: 'Canada'
-      },
-      {
-        title: 'Title example 2',
-        label: 'United Kingdom'
-      }
-    ]
-  }),
-  render () {
-    return <vue-simple-timeline onClick={this.action} items={this.items}>With JSX</vue-simple-timeline>
-  },
-  methods: { action: linkTo('clickto', 'with some emoji') }
-}))
