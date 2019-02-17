@@ -1,8 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import {
-  addDecorator,
-  configure
-} from '@storybook/vue'
+import { configure } from '@storybook/vue'
 
 const req = require.context('../../stories', true, /.stories.js$/)
 

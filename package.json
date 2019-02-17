@@ -2,7 +2,7 @@
   "name": "vue-simple-timeline",
   "version": "0.1.0",
   "private": false,
-  "description": "Just a simple timeline component made with Vue.js",
+  "description": "Just a simple horizontal timeline component made with Vue.js",
   "homepage": "https://github.com/guastallaigor/vue-simple-timeline#readme",
   "author": "Igor Guastalla de Lima",
   "scripts": {

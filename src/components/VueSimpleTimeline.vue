@@ -4,21 +4,22 @@
       <ol>
         <li v-for="(item, i) in items" :key="i" @click="cardClicked(item)" :style="setLineColor">
           <div class="time" :class="getTimeClass(item)" :style="getTimeStyles">
+            <slot v-if="hasSlot"/>
             <span
               class="title"
-              v-if="item[titleAttr]"
+              v-if="!hasSlot && item[titleAttr]"
               :class="getTitleClasses">
               {{ item[titleAttr] | textSubstr(titleSubstr) }}
             </span>
             <span
               class="content"
-              v-if="item[contentAttr]"
+              v-if="!hasSlot && item[contentAttr]"
               :class="getContentClasses">
               {{ item[contentAttr] | textSubstr(contentSubstr) }}
             </span>
           </div>
         </li>
-        <li></li>
+        <li :style="setLineColor"></li>
       </ol>
     </section>
   </div>
@@ -54,7 +55,7 @@ export default {
     },
     titleSubstr: {
       type: Number,
-      default: 33
+      default: 18
     },
     contentAttr: {
       type: String,
@@ -71,6 +72,10 @@ export default {
     contentSubstr: {
       type: Number,
       default: 250
+    },
+    hasSlot: {
+      type: Boolean,
+      default: false
     },
     minWidth: {
       type: String,
@@ -115,7 +120,7 @@ export default {
     },
     setTimelineStyles () {
       const { timelineBackground, timelinePadding } = this
-      let styleObj = {}
+      const styleObj = {}
 
       if (timelinePadding) {
         styleObj.padding = timelinePadding
@@ -133,28 +138,27 @@ export default {
       return lineColor ? `background: ${lineColor}` : ''
     },
     getTimeStyles () {
-      return {
-        minWidth: this.minWidth,
-        minHeight: this.minHeight
+      const { minWidth, minHeight, clickable } = this
+      const styleObj = {
+        minWidth,
+        minHeight
       }
+
+      if (!clickable) {
+        styleObj.cursor = 'default'
+      }
+
+      return styleObj
     },
     getTitleClasses () {
-      if (this.titleClass) {
-        return this.titleClass
-      }
+      const { titleClass, titleCentered } = this
 
-      return {
-        'text-center': this.titleCentered
-      }
+      return titleClass || { 'text-center': titleCentered }
     },
     getContentClasses () {
-      if (this.contentClass) {
-        return this.contentClass
-      }
+      const { contentClass, contentCentered } = this
 
-      return {
-        'text-center': this.contentCentered
-      }
+      return contentClass || { 'text-center': contentCentered }
     }
   },
   methods: {
@@ -175,7 +179,7 @@ export default {
         }
       }
 
-      return ''
+      return {}
     }
   }
 }
