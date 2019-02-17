@@ -5,11 +5,18 @@ const Components = {
   VueSimpleTimeline
 }
 
-const VueSimpleTimeline = {
+const VueSimpleTimelinePlugin = {
   install (Vue) {
-    Vue.component('VueSimpleTimeline', VueSimpleTimeline)
+    Object.keys(Components).forEach((name) => {
+      Vue.component(name, Components[name])
+    })
   }
 }
 
 // Export as a plugin
-export default VueSimpleTimeline
+export default VueSimpleTimelinePlugin
+
+// Export as individual components
+export {
+  VueSimpleTimeline
+}
