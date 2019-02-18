@@ -19,13 +19,13 @@
 ### npm
 
 ```bash
-$npm install vue-simple-timeline
+$ npm install vue-simple-timeline
 ```
 
 ### yarn (recommended)
 
 ```bash
-$yarn add vue-simple-timeline
+$ yarn add vue-simple-timeline
 ```
 
 ## Quick start
@@ -38,7 +38,7 @@ import VueSimpleTimeline from 'vue-simple-timeline'
 Vue.use(VueSimpleTimeline)
 ```
 
-## Nuxt.js
+### Nuxt.js
 
 You can import in a Nuxt.js plugin
 
@@ -100,6 +100,13 @@ $yarn storybook:serve
 
 ### Jest
 Before making the PR, if you changed something that needs to be tested, please make the tests inside the `tests/unit` folder.
+
+## TODO
+
+* [ ] Add 100% test coverage
+* [ ] Add demo website/code pen
+* [ ] Publish storybook
+* [ ] Publish in npm
 
 ## License
 
