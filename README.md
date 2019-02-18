@@ -82,7 +82,7 @@ plugins: [
 
 ## Development
 
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/guastallaigor/vue-simple-timeline/issues)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/guastallaigor/vue-simple-timeline/issues) [![Greenkeeper badge](https://badges.greenkeeper.io/guastallaigor/vue-simple-timeline.svg)](https://greenkeeper.io/)
 
 Fork the project and enter this commands in your terminal:
 
