@@ -12,8 +12,6 @@
 [![buddy pipeline](https://app.buddy.works/guastallaigor/vue-simple-timeline/pipelines/pipeline/163726/badge.svg?token=d1e810606d21ee50ab07b91076e24552754952406a381d13de8ae5deedd6de3f "buddy pipeline")](https://app.buddy.works/guastallaigor/vue-simple-timeline/pipelines/pipeline/163726)
 [![codecov](https://codecov.io/gh/guastallaigor/vue-simple-timeline/branch/master/graph/badge.svg)](https://codecov.io/gh/guastallaigor/vue-simple-timeline)
 [![Greenkeeper badge](https://badges.greenkeeper.io/guastallaigor/vue-simple-timeline.svg)](https://greenkeeper.io/)
-![](https://img.shields.io/npm/dt/vue-simple-timeline.svg)
-![](https://img.shields.io/david/guastallaigor/vue-simple-timeline.svg)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 ## How to install
