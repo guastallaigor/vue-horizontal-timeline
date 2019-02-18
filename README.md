@@ -13,6 +13,7 @@
 [![buddy pipeline](https://app.buddy.works/limaguastallaigor/vue-simple-timeline/pipelines/pipeline/173623/badge.svg?token=830a75b934ef2291ac702693fd25c5ce1bda7a85057312f916c28ef27699b9c1 "buddy pipeline")](https://app.buddy.works/limaguastallaigor/vue-simple-timeline/pipelines/pipeline/173623)
 [![codecov](https://codecov.io/gh/guastallaigor/vue-simple-timeline/branch/master/graph/badge.svg)](https://codecov.io/gh/guastallaigor/vue-simple-timeline)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/guastallaigor/vue-simple-timeline.svg)](https://greenkeeper.io/)
 
 ## How to install
 
@@ -82,7 +83,7 @@ plugins: [
 
 ## Development
 
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/guastallaigor/vue-simple-timeline/issues) [![Greenkeeper badge](https://badges.greenkeeper.io/guastallaigor/vue-simple-timeline.svg)](https://greenkeeper.io/)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/guastallaigor/vue-simple-timeline/issues)
 
 Fork the project and enter this commands in your terminal:
 
