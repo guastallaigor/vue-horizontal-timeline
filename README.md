@@ -1,11 +1,12 @@
 <div align="center">
-    <img src="./.github/logo.png" width="200px">
+  <img src="./.github/logo.png" width="200px">
+  <h1>Vue Simple Timeline</h1>
 </div>
 <p align="center">
-    Just a simple horizontal timeline component made with Vue.js.
+  Just a simple horizontal timeline component made with Vue.js.
 </p>
 <p align="center">
-    <a href="https://codepen.io/tutsplus/pen/ZKpNwm" target="_blank">Inspiration</a>
+  <a href="https://codepen.io/tutsplus/pen/ZKpNwm" target="_blank">Inspiration</a>
 </p>
 
 [![buddy pipeline](https://app.buddy.works/guastallaigor/vue-simple-timeline/pipelines/pipeline/163725/badge.svg?token=d1e810606d21ee50ab07b91076e24552754952406a381d13de8ae5deedd6de3f "buddy pipeline")](https://app.buddy.works/guastallaigor/vue-simple-timeline/pipelines/pipeline/163725)
