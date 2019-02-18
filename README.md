@@ -12,7 +12,6 @@
 [![buddy pipeline](https://app.buddy.works/limaguastallaigor/vue-simple-timeline/pipelines/pipeline/173624/badge.svg?token=830a75b934ef2291ac702693fd25c5ce1bda7a85057312f916c28ef27699b9c1 "buddy pipeline")](https://app.buddy.works/limaguastallaigor/vue-simple-timeline/pipelines/pipeline/173624)
 [![buddy pipeline](https://app.buddy.works/limaguastallaigor/vue-simple-timeline/pipelines/pipeline/173623/badge.svg?token=830a75b934ef2291ac702693fd25c5ce1bda7a85057312f916c28ef27699b9c1 "buddy pipeline")](https://app.buddy.works/limaguastallaigor/vue-simple-timeline/pipelines/pipeline/173623)
 [![codecov](https://codecov.io/gh/guastallaigor/vue-simple-timeline/branch/master/graph/badge.svg)](https://codecov.io/gh/guastallaigor/vue-simple-timeline)
-[![Greenkeeper badge](https://badges.greenkeeper.io/guastallaigor/vue-simple-timeline.svg)](https://greenkeeper.io/)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 ## How to install
@@ -96,7 +95,7 @@ yarn
 ### Storybook
 For visual testing, this project contains storybook which you can run by doing the next command:
 ```sh
-$yarn storybook:serve
+$ yarn storybook:serve
 ```
 
 ### Jest
