@@ -110,14 +110,6 @@ export default {
     }
   },
   computed: {
-    itemComp: {
-      get () {
-        return this.itemSelected
-      },
-      set (value) {
-        this.$emit('update:itemSelected', value)
-      }
-    },
     setTimelineStyles () {
       const { timelineBackground, timelinePadding } = this
       const styleObj = {}
@@ -167,7 +159,7 @@ export default {
         return
       }
 
-      this.itemComp = { ...item }
+      this.$emit('update:itemSelected', { ...item })
       this.$emit('click', item)
     },
     getTimeClass (item) {
