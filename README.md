@@ -9,8 +9,8 @@
   <a href="https://codepen.io/tutsplus/pen/ZKpNwm" target="_blank">Inspiration</a>
 </p>
 
-[![buddy pipeline](https://app.buddy.works/limaguastallaigor/vue-horizontal-timeline/pipelines/pipeline/173624/badge.svg?token=830a75b934ef2291ac702693fd25c5ce1bda7a85057312f916c28ef27699b9c1 "buddy pipeline")](https://app.buddy.works/limaguastallaigor/vue-horizontal-timeline/pipelines/pipeline/173624)
-[![buddy pipeline](https://app.buddy.works/limaguastallaigor/vue-horizontal-timeline/pipelines/pipeline/173623/badge.svg?token=830a75b934ef2291ac702693fd25c5ce1bda7a85057312f916c28ef27699b9c1 "buddy pipeline")](https://app.buddy.works/limaguastallaigor/vue-horizontal-timeline/pipelines/pipeline/173623)
+[![buddy pipeline](https://app.buddy.works/limaguastallaigor/vue-horizontal-timeline/pipelines/pipeline/173812/badge.svg?token=830a75b934ef2291ac702693fd25c5ce1bda7a85057312f916c28ef27699b9c1 "buddy pipeline")](https://app.buddy.works/limaguastallaigor/vue-horizontal-timeline/pipelines/pipeline/173812)
+[![buddy pipeline](https://app.buddy.works/limaguastallaigor/vue-horizontal-timeline/pipelines/pipeline/173811/badge.svg?token=830a75b934ef2291ac702693fd25c5ce1bda7a85057312f916c28ef27699b9c1 "buddy pipeline")](https://app.buddy.works/limaguastallaigor/vue-horizontal-timeline/pipelines/pipeline/173811)
 [![codecov](https://codecov.io/gh/guastallaigor/vue-horizontal-timeline/branch/master/graph/badge.svg)](https://codecov.io/gh/guastallaigor/vue-horizontal-timeline)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 [![Greenkeeper badge](https://badges.greenkeeper.io/guastallaigor/vue-horizontal-timeline.svg)](https://greenkeeper.io/)
