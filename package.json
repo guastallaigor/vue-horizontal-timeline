@@ -1,13 +1,12 @@
 {
-  "name": "vue-simple-timeline",
+  "name": "vue-horizontal-timeline",
   "version": "0.1.0",
   "private": false,
   "description": "Just a simple horizontal timeline component made with Vue.js",
-  "homepage": "https://github.com/guastallaigor/vue-simple-timeline#readme",
+  "homepage": "https://github.com/guastallaigor/vue-horizontal-timeline#readme",
   "author": "Igor Guastalla de Lima",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "storybook:build": "vue-cli-service storybook:build -c config/storybook",
     "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
@@ -46,7 +45,7 @@
     "vue-template-compiler": "^2.5.21"
   },
   "bugs": {
-    "url": "https://github.com/guastallaigor/vue-simple-timeline/issues"
+    "url": "https://github.com/guastallaigor/vue-horizontal-timeline/issues"
   },
   "files": [
     "src/*",
@@ -59,13 +58,13 @@
     "timeline",
     "vue-components",
     "vue-timeline",
-    "vue-simple-timeline"
+    "vue-horizontal-timeline"
   ],
   "license": "MIT",
-  "main": "./vue-simple-timeline.css.js",
+  "main": "./vue-horizontal-timeline.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com:guastallaigor/vue-simple-timeline.git"
+    "url": "https://github.com:guastallaigor/vue-horizontal-timeline.git"
   },
   "commitlint": {
     "extends": [

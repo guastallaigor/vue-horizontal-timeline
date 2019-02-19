@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
-import VueSimpleTimeline from '../../src/components/VueSimpleTimeline'
+import VueHorizontalTimeline from '../../src/components/VueHorizontalTimeline'
 
-describe('When I create the VueSimpleTimeline component', () => {
+describe('When I create the VueHorizontalTimeline component', () => {
   const value1 = {
     title: 'Title example 1',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex dolor, malesuada luctus scelerisque ac, auctor vitae risus. Vivamus risus dolor, faucibus a bibendum quis, facilisis eget odio. Nullam non condimentum orci, a cursus magna. Suspendisse tempor rutrum eros, non pellentesque odio commodo eu. Donec at volutpat enim. Vivamus mattis volutpat urna, sit amet vulputate mauris sollicitudin et. Proin consequat at dolor in sodales. Vestibulum vel porta turpis. Pellentesque sollicitudin justo est, ut dapibus felis luctus mollis. Suspendisse feugiat, metus ut auctor dictum, nulla dui fringilla nisl, a pulvinar ipsum justo non lacus. Integer vestibulum sapien metus, et congue felis efficitur iaculis. Aliquam et mi quis nulla molestie elementum. Vestibulum in nibh nibh.'
@@ -16,22 +16,22 @@ describe('When I create the VueSimpleTimeline component', () => {
   }
   const items = [value1, value2, value3]
   const createTimelineWrapper = (propsData = {}, slot) => {
-    return mount(VueSimpleTimeline, {
+    return mount(VueHorizontalTimeline, {
       propsData,
       slots: {
-        default: slot || 'VueSimpleTimeline'
+        default: slot || 'VueHorizontalTimeline'
       }
     })
   }
 
   it('should be a Vue instance', () => {
     const wrapper = createTimelineWrapper({ items })
-    expect(wrapper.find(VueSimpleTimeline).isVueInstance()).toBe(true)
+    expect(wrapper.find(VueHorizontalTimeline).isVueInstance()).toBe(true)
   })
 
   it('should add a text-center class inside the title if titleCentered prop is added', () => {
     const wrapper = createTimelineWrapper({ items, titleCentered: true })
-    const timelineClasses = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time>span').classes()
+    const timelineClasses = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:first-child>.time>span').classes()
     expect(timelineClasses.length).toBe(2)
     expect(timelineClasses).toContainEqual('text-center')
   })
@@ -39,7 +39,7 @@ describe('When I create the VueSimpleTimeline component', () => {
   it('should emit a click event when clicked on any timeline card', () => {
     const wrapper = createTimelineWrapper({ items })
 
-    const time = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time')
+    const time = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:first-child>.time')
     time.trigger('click')
     time.trigger('click')
     time.trigger('click')
@@ -49,7 +49,7 @@ describe('When I create the VueSimpleTimeline component', () => {
   })
 
   it('should print html inside slot', () => {
-    const html = '<p id="find-this-id">VueSimpleTimeline</p>'
+    const html = '<p id="find-this-id">VueHorizontalTimeline</p>'
     const wrapper = createTimelineWrapper({ items, hasSlot: true }, html)
     const slot = wrapper.find('p#find-this-id')
 
@@ -61,7 +61,7 @@ describe('When I create the VueSimpleTimeline component', () => {
   it('should disable event click when clickable prop is false', () => {
     const wrapper = createTimelineWrapper({ items, clickable: false })
 
-    const time = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time')
+    const time = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:first-child>.time')
     time.trigger('click')
     time.trigger('click')
     time.trigger('click')
@@ -72,10 +72,10 @@ describe('When I create the VueSimpleTimeline component', () => {
   it('should change the color of the line inside the timeline to black when the prop lineColor is set to black', () => {
     const wrapper = createTimelineWrapper({ items, lineColor: 'black' })
 
-    const lis = wrapper.findAll('.vue-simple-timeline>section.timeline>ol>li')
-    const li1 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child')
-    const li2 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:nth-child(2)')
-    const li3 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:nth-child(3)')
+    const lis = wrapper.findAll('.vue-horizontal-timeline>section.timeline>ol>li')
+    const li1 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:first-child')
+    const li2 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:nth-child(2)')
+    const li3 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:nth-child(3)')
 
     // one more is created empty
     expect(lis.length).toBe(4)
@@ -87,7 +87,7 @@ describe('When I create the VueSimpleTimeline component', () => {
   it('should change the background color of the timeline to black when the prop timelineBackground is set to black', () => {
     const wrapper = createTimelineWrapper({ items, timelineBackground: 'black' })
 
-    const timeline = wrapper.find('.vue-simple-timeline')
+    const timeline = wrapper.find('.vue-horizontal-timeline')
 
     expect(timeline.exists()).toBe(true)
     expect(timeline.attributes().style).toBe('background: black;')
@@ -96,7 +96,7 @@ describe('When I create the VueSimpleTimeline component', () => {
   it('should change the padding of the timeline to 15em when the prop timelinePadding is set to 15em', () => {
     const wrapper = createTimelineWrapper({ items, timelinePadding: '15em' })
 
-    const timeline = wrapper.find('.vue-simple-timeline')
+    const timeline = wrapper.find('.vue-horizontal-timeline')
 
     expect(timeline.exists()).toBe(true)
     expect(timeline.attributes().style).toBe('padding: 15em;')
@@ -105,7 +105,7 @@ describe('When I create the VueSimpleTimeline component', () => {
   it('should change the min-height of the timeline to 900px when the prop minHeight is set to 900px', () => {
     const wrapper = createTimelineWrapper({ items, minHeight: '900px' })
 
-    const time = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time')
+    const time = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:first-child>.time')
 
     expect(time.exists()).toBe(true)
     // min-width 200px by default
@@ -115,7 +115,7 @@ describe('When I create the VueSimpleTimeline component', () => {
   it('should change the min-width of the timeline to 500px when the prop minWidth is set to 500px', () => {
     const wrapper = createTimelineWrapper({ items, minWidth: '500px' })
 
-    const time = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time')
+    const time = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:first-child>.time')
 
     expect(time.exists()).toBe(true)
     expect(time.attributes().style).toBe('min-width: 500px;')
@@ -127,9 +127,9 @@ describe('When I create the VueSimpleTimeline component', () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing...
           </span>`
 
-    const content1 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time>span.content')
-    const content2 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:nth-child(2)>.time>span.content')
-    const content3 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:nth-child(3)>.time>span.content')
+    const content1 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:first-child>.time>span.content')
+    const content2 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:nth-child(2)>.time>span.content')
+    const content3 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:nth-child(3)>.time>span.content')
 
     expect(content1.exists()).toBe(true)
     expect(content2.exists()).toBe(true)
@@ -142,9 +142,9 @@ describe('When I create the VueSimpleTimeline component', () => {
   it('should add a custom-class to the cards content when contentClass prop is set to custom-class', () => {
     const wrapper = createTimelineWrapper({ items, contentClass: 'custom-class' })
 
-    const content1 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time>span.content')
-    const content2 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:nth-child(2)>.time>span.content')
-    const content3 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:nth-child(3)>.time>span.content')
+    const content1 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:first-child>.time>span.content')
+    const content2 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:nth-child(2)>.time>span.content')
+    const content3 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:nth-child(3)>.time>span.content')
     const arr = [content1, content2, content3]
 
     for (var i = 0; i < 3; i++) {
@@ -157,9 +157,9 @@ describe('When I create the VueSimpleTimeline component', () => {
   it('should add text-center class to all cards content when contentCentered prop is set to true', () => {
     const wrapper = createTimelineWrapper({ items, contentCentered: true })
 
-    const content1 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time>span.content')
-    const content2 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:nth-child(2)>.time>span.content')
-    const content3 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:nth-child(3)>.time>span.content')
+    const content1 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:first-child>.time>span.content')
+    const content2 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:nth-child(2)>.time>span.content')
+    const content3 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:nth-child(3)>.time>span.content')
     const arr = [content1, content2, content3]
 
     for (var i = 0; i < 3; i++) {
@@ -176,7 +176,7 @@ describe('When I create the VueSimpleTimeline component', () => {
     }
     const anotherItems = [anotherValue]
     const wrapper = createTimelineWrapper({ items: anotherItems, contentAttr: 'test' })
-    const content1 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time>span.content')
+    const content1 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:first-child>.time>span.content')
     expect(content1.exists()).toBe(true)
     expect(content1.html()).toBe(`<span class="content">
             Lorem ipsum dolor sit amet
@@ -195,9 +195,9 @@ describe('When I create the VueSimpleTimeline component', () => {
             Title example 3
           </span>`
 
-    const title1 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time>span.title')
-    const title2 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:nth-child(2)>.time>span.title')
-    const title3 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:nth-child(3)>.time>span.title')
+    const title1 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:first-child>.time>span.title')
+    const title2 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:nth-child(2)>.time>span.title')
+    const title3 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:nth-child(3)>.time>span.title')
 
     expect(title1.exists()).toBe(true)
     expect(title2.exists()).toBe(true)
@@ -210,9 +210,9 @@ describe('When I create the VueSimpleTimeline component', () => {
   it('should add a custom-class to the cards title when titleClass prop is set to custom-class', () => {
     const wrapper = createTimelineWrapper({ items, titleClass: 'custom-class' })
 
-    const title1 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time>span.title')
-    const title2 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:nth-child(2)>.time>span.title')
-    const title3 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:nth-child(3)>.time>span.title')
+    const title1 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:first-child>.time>span.title')
+    const title2 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:nth-child(2)>.time>span.title')
+    const title3 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:nth-child(3)>.time>span.title')
     const arr = [title1, title2, title3]
 
     for (var i = 0; i < 3; i++) {
@@ -225,9 +225,9 @@ describe('When I create the VueSimpleTimeline component', () => {
   it('should add text-center class to all cards title when titleCentered prop is set to true', () => {
     const wrapper = createTimelineWrapper({ items, titleCentered: true })
 
-    const title1 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time>span.title')
-    const title2 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:nth-child(2)>.time>span.title')
-    const title3 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:nth-child(3)>.time>span.title')
+    const title1 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:first-child>.time>span.title')
+    const title2 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:nth-child(2)>.time>span.title')
+    const title3 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:nth-child(3)>.time>span.title')
     const arr = [title1, title2, title3]
 
     for (var i = 0; i < 3; i++) {
@@ -244,7 +244,7 @@ describe('When I create the VueSimpleTimeline component', () => {
     }
     const anotherItems = [anotherValue]
     const wrapper = createTimelineWrapper({ items: anotherItems, titleAttr: 'test' })
-    const title1 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time>span.title')
+    const title1 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:first-child>.time>span.title')
     expect(title1.exists()).toBe(true)
     expect(title1.html()).toBe(`<span class="title">
             Title example 1
@@ -257,7 +257,7 @@ describe('When I create the VueSimpleTimeline component', () => {
       content: ''
     }
     const wrapper = createTimelineWrapper({ items, itemSelected })
-    const time = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time')
+    const time = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:first-child>.time')
     time.trigger('click')
     const expected = {
       title: 'Title example 1',
@@ -274,7 +274,7 @@ describe('When I create the VueSimpleTimeline component', () => {
       content: 'content'
     }
     const wrapper = createTimelineWrapper({ items, itemSelected, itemUniqueKey: 'title' })
-    const time = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time:first-child')
+    const time = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:first-child>.time:first-child')
     time.trigger('click')
     const expected = {
       title: 'Title example 1',

@@ -1,5 +1,5 @@
 <template>
-  <div class="vue-simple-timeline" :style="setTimelineStyles">
+  <div class="vue-horizontal-timeline" :style="setTimelineStyles">
     <section class="timeline">
       <ol>
         <li v-for="(item, i) in items" :key="i" :style="setLineColor">
@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  name: 'VueSimpleTimeline',
+  name: 'VueHorizontalTimeline',
   props: {
     items: {
       type: Array,
@@ -198,7 +198,7 @@ $background-color: #E9E9E9;
 $marker: #E91E63;
 $line: #03A9F4;
 
-.vue-simple-timeline {
+.vue-horizontal-timeline {
   position: relative;
   background: $background-color;
   width: 100%;

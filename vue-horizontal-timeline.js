@@ -1,11 +1,11 @@
-import VueSimpleTimeline from './src/components/VueSimpleTimeline.vue'
+import VueHorizontalTimeline from './src/components/VueHorizontalTimeline.vue'
 
 // Export components
 const Components = {
-  VueSimpleTimeline
+  VueHorizontalTimeline
 }
 
-const VueSimpleTimelinePlugin = {
+const VueHorizontalTimelinePlugin = {
   install (Vue) {
     Object.keys(Components).forEach((name) => {
       Vue.component(name, Components[name])
@@ -14,9 +14,9 @@ const VueSimpleTimelinePlugin = {
 }
 
 // Export as a plugin
-export default VueSimpleTimelinePlugin
+export default VueHorizontalTimelinePlugin
 
 // Export as individual components
 export {
-  VueSimpleTimeline
+  VueHorizontalTimeline
 }

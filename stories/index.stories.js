@@ -3,9 +3,9 @@ import { storiesOf } from '@storybook/vue'
 import { withKnobs, boolean, object, text, number } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import { withBackgrounds } from '@storybook/addon-backgrounds'
-import VueSimpleTimeline from '../src/components/VueSimpleTimeline'
+import VueHorizontalTimeline from '../src/components/VueHorizontalTimeline'
 
-const timelineStory = storiesOf('VueSimpleTimeline', module)
+const timelineStory = storiesOf('VueHorizontalTimeline', module)
   .addDecorator(withBackgrounds([
     { name: 'Blue', value: 'blue' },
     { name: 'Green', value: 'green' },
@@ -43,7 +43,7 @@ timelineStory.add('Default', () => {
   const items = [value1, value2, value3]
 
   return {
-    components: { VueSimpleTimeline },
+    components: { VueHorizontalTimeline },
     methods: { action: action('Card Clicked!') },
     props: {
       items: {
@@ -122,7 +122,7 @@ timelineStory.add('Default', () => {
         default: boolean('Clickable', true)
       }
     },
-    template: `<vue-simple-timeline
+    template: `<vue-horizontal-timeline
       :items="items"
       :item-selected.sync="item"
       :item-unique-key="itemUniqueKey"
@@ -148,6 +148,6 @@ timelineStory.add('Default', () => {
       <p>Slot text</p>
       <p>Slot text</p>
     </div>
-    </vue-simple-timeline>`
+    </vue-horizontal-timeline>`
   }
 })

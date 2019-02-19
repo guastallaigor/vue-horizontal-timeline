@@ -1,6 +1,6 @@
 <div align="center">
   <img src="./.github/logo.png" width="200px">
-  <h1>Vue Simple Timeline</h1>
+  <h1>Vue Horizontal Timeline</h1>
 </div>
 <p align="center">
   Just a simple horizontal timeline component made with Vue.js.
@@ -9,24 +9,24 @@
   <a href="https://codepen.io/tutsplus/pen/ZKpNwm" target="_blank">Inspiration</a>
 </p>
 
-[![buddy pipeline](https://app.buddy.works/limaguastallaigor/vue-simple-timeline/pipelines/pipeline/173624/badge.svg?token=830a75b934ef2291ac702693fd25c5ce1bda7a85057312f916c28ef27699b9c1 "buddy pipeline")](https://app.buddy.works/limaguastallaigor/vue-simple-timeline/pipelines/pipeline/173624)
-[![buddy pipeline](https://app.buddy.works/limaguastallaigor/vue-simple-timeline/pipelines/pipeline/173623/badge.svg?token=830a75b934ef2291ac702693fd25c5ce1bda7a85057312f916c28ef27699b9c1 "buddy pipeline")](https://app.buddy.works/limaguastallaigor/vue-simple-timeline/pipelines/pipeline/173623)
-[![codecov](https://codecov.io/gh/guastallaigor/vue-simple-timeline/branch/master/graph/badge.svg)](https://codecov.io/gh/guastallaigor/vue-simple-timeline)
+[![buddy pipeline](https://app.buddy.works/limaguastallaigor/vue-horizontal-timeline/pipelines/pipeline/173624/badge.svg?token=830a75b934ef2291ac702693fd25c5ce1bda7a85057312f916c28ef27699b9c1 "buddy pipeline")](https://app.buddy.works/limaguastallaigor/vue-horizontal-timeline/pipelines/pipeline/173624)
+[![buddy pipeline](https://app.buddy.works/limaguastallaigor/vue-horizontal-timeline/pipelines/pipeline/173623/badge.svg?token=830a75b934ef2291ac702693fd25c5ce1bda7a85057312f916c28ef27699b9c1 "buddy pipeline")](https://app.buddy.works/limaguastallaigor/vue-horizontal-timeline/pipelines/pipeline/173623)
+[![codecov](https://codecov.io/gh/guastallaigor/vue-horizontal-timeline/branch/master/graph/badge.svg)](https://codecov.io/gh/guastallaigor/vue-horizontal-timeline)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
-[![Greenkeeper badge](https://badges.greenkeeper.io/guastallaigor/vue-simple-timeline.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/guastallaigor/vue-horizontal-timeline.svg)](https://greenkeeper.io/)
 
 ## How to install
 
 ### npm
 
 ```bash
-$ npm install vue-simple-timeline
+$ npm install vue-horizontal-timeline
 ```
 
 ### yarn (recommended)
 
 ```bash
-$ yarn add vue-simple-timeline
+$ yarn add vue-horizontal-timeline
 ```
 
 ## Quick start
@@ -34,27 +34,27 @@ $ yarn add vue-simple-timeline
 
 ```js
 import Vue from 'vue'
-import VueSimpleTimeline from 'vue-simple-timeline'
+import VueHorizontalTimeline from 'vue-horizontal-timeline'
 
-Vue.use(VueSimpleTimeline)
+Vue.use(VueHorizontalTimeline)
 ```
 
 ### Nuxt.js
 
 You can import in a Nuxt.js plugin
 
-`~/plugins/vue-simple-timeline.js`
+`~/plugins/vue-horizontal-timeline.js`
 ```js
 import Vue from 'vue'
-import VueSimpleTimeline from 'vue-simple-timeline'
+import VueHorizontalTimeline from 'vue-horizontal-timeline'
 
-Vue.use(VueSimpleTimeline)
+Vue.use(VueHorizontalTimeline)
 ```
 
 and then import it in your `nuxt.config.js` file
 ```js
 plugins: [
-    '~/plugins/vue-simple-timeline.js'
+    '~/plugins/vue-horizontal-timeline.js'
 ]
 ```
 
@@ -83,13 +83,13 @@ plugins: [
 
 ## Development
 
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/guastallaigor/vue-simple-timeline/issues)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/guastallaigor/vue-horizontal-timeline/issues)
 
 Fork the project and enter this commands in your terminal:
 
 ```sh
-git clone https://github.com/YOUR_GITHUB_USERNAME/vue-simple-timeline.git
-cd vue-simple-timeline
+git clone https://github.com/YOUR_GITHUB_USERNAME/vue-horizontal-timeline.git
+cd vue-horizontal-timeline
 yarn
 ```
 
@@ -119,11 +119,11 @@ If an error occurs, you can use the `npm run commit:retry` command that runs the
 
 ## TODO
 
-* [ ] Add 100% test coverage
+* [X] Add 100% test coverage
 * [ ] Add demo website/code pen
 * [ ] Publish storybook
 * [ ] Publish in npm
 
 ## License
 
-MIT © [guastallaigor](https://github.com/guastallaigor/vue-simple-timeline/blob/master/LICENSE)
+MIT © [guastallaigor](https://github.com/guastallaigor/vue-horizontal-timeline/blob/master/LICENSE)
