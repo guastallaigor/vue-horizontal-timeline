@@ -102,6 +102,13 @@ $ yarn storybook:serve
 ### Jest
 Before making the PR, if you changed something that needs to be tested, please make the tests inside the `tests/unit` folder.
 
+### Commitlint
+This project follows the [commitlint](https://github.com/conventional-changelog/commitlint) guidelines, with minor changes.
+
+You can commit using `npm run commit` to help you with that.
+
+There's a `pre-push` hook that runs all the unit tests before you can push it. If an error occurs, an you can use the `npm run commit:retry` command that runs the previous `npm run commit` that you already filled.
+
 ## TODO
 
 * [ ] Add 100% test coverage
