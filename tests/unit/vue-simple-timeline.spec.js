@@ -168,4 +168,86 @@ describe('When I create the VueSimpleTimeline component', () => {
       expect(arr[i].classes()).toContainEqual('text-center')
     }
   })
+
+  it('should change the content attribute key that is being used from content to test if contentAttr prop is set to test', () => {
+    const anotherValue = {
+      title: 'Title example 1',
+      test: 'Lorem ipsum dolor sit amet'
+    }
+    const anotherItems = [anotherValue]
+    const wrapper = createTimelineWrapper({ items: anotherItems, contentAttr: 'test' })
+    const content1 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time>span.content')
+    expect(content1.exists()).toBe(true)
+    expect(content1.html()).toBe(`<span class="content">
+            Lorem ipsum dolor sit amet
+          </span>`)
+  })
+
+  it('should wrap the title when it has above 50 characters and the titleSubstr prop is set to 50', () => {
+    const wrapper = createTimelineWrapper({ items, titleSubstr: 50 })
+    const html1 = `<span class="title">
+            Title example 1
+          </span>`
+    const html2 = `<span class="title">
+            Title example 2
+          </span>`
+    const html3 = `<span class="title">
+            Title example 3
+          </span>`
+
+    const title1 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time>span.title')
+    const title2 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:nth-child(2)>.time>span.title')
+    const title3 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:nth-child(3)>.time>span.title')
+
+    expect(title1.exists()).toBe(true)
+    expect(title2.exists()).toBe(true)
+    expect(title3.exists()).toBe(true)
+    expect(title1.html()).toBe(html1)
+    expect(title2.html()).toBe(html2)
+    expect(title3.html()).toBe(html3)
+  })
+
+  it('should add a custom-class to the cards title when titleClass prop is set to custom-class', () => {
+    const wrapper = createTimelineWrapper({ items, titleClass: 'custom-class' })
+
+    const title1 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time>span.title')
+    const title2 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:nth-child(2)>.time>span.title')
+    const title3 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:nth-child(3)>.time>span.title')
+    const arr = [title1, title2, title3]
+
+    for (var i = 0; i < 3; i++) {
+      expect(arr[i].exists()).toBe(true)
+      expect(arr[i].classes().length).toBe(2)
+      expect(arr[i].classes()).toContainEqual('custom-class')
+    }
+  })
+
+  it('should add text-center class to all cards title when titleCentered prop is set to true', () => {
+    const wrapper = createTimelineWrapper({ items, titleCentered: true })
+
+    const title1 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time>span.title')
+    const title2 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:nth-child(2)>.time>span.title')
+    const title3 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:nth-child(3)>.time>span.title')
+    const arr = [title1, title2, title3]
+
+    for (var i = 0; i < 3; i++) {
+      expect(arr[i].exists()).toBe(true)
+      expect(arr[i].classes().length).toBe(2)
+      expect(arr[i].classes()).toContainEqual('text-center')
+    }
+  })
+
+  it('should change the title attribute key that is being used from title to test if titleAttr prop is set to test', () => {
+    const anotherValue = {
+      test: 'Title example 1',
+      content: 'Content'
+    }
+    const anotherItems = [anotherValue]
+    const wrapper = createTimelineWrapper({ items: anotherItems, titleAttr: 'test' })
+    const title1 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time>span.title')
+    expect(title1.exists()).toBe(true)
+    expect(title1.html()).toBe(`<span class="title">
+            Title example 1
+          </span>`)
+  })
 })
