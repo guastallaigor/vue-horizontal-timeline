@@ -102,6 +102,12 @@ $ yarn storybook:serve
 ### Jest
 Before making the PR, if you changed something that needs to be tested, please make the tests inside the `tests/unit` folder.
 
+To run the tests you can use the next command:
+
+```sh
+$ yarn test:unit
+```
+
 ### Commitlint
 This project follows the [commitlint](https://github.com/conventional-changelog/commitlint) guidelines, with minor changes.
 
