@@ -20,7 +20,7 @@
 ### npm
 
 ```bash
-$ npm install vue-horizontal-timeline
+$ npm install vue-horizontal-timeline --save
 ```
 
 ### yarn (recommended)
@@ -29,14 +29,38 @@ $ npm install vue-horizontal-timeline
 $ yarn add vue-horizontal-timeline
 ```
 
+You may also need to install `node-sass` and `sass-loader` as a `devDependency`:
+
+```bash
+$ npm install sass-loader node-sass --save-dev
+```
+
+```bash
+$ yarn add sass-loader node-sass -D
+```
+
 ## Quick start
 ### Vue.js
+
+You can import in you `main.js` file.
 
 ```js
 import Vue from 'vue'
 import VueHorizontalTimeline from 'vue-horizontal-timeline'
 
 Vue.use(VueHorizontalTimeline)
+```
+
+Or locally in any component:
+
+```js
+import { VueHorizontalTimeline } from 'vue-horizontal-timeline'
+
+export default {
+  components: {
+    VueHorizontalTimeline
+  }
+}
 ```
 
 ### Nuxt.js
@@ -56,6 +80,14 @@ and then import it in your `nuxt.config.js` file
 plugins: [
     '~/plugins/vue-horizontal-timeline.js'
 ]
+```
+
+## Basic usage
+
+```html
+<template>
+  <vue-horizontal-timeline :items="items"/>
+</template>
 ```
 
 ## Props
@@ -102,7 +134,7 @@ $ yarn storybook:serve
 ### Jest
 Before making the PR, if you changed something that needs to be tested, please make the tests inside the `tests/unit` folder.
 
-To run the tests you can use the next command:
+To run the tests, you can use the next command:
 
 ```sh
 $ yarn test:unit
@@ -122,7 +154,7 @@ If an error occurs, you can use the `npm run commit:retry` command that runs the
 * [X] Add 100% test coverage
 * [ ] Add demo website/code pen
 * [ ] Publish storybook
-* [ ] Publish in npm
+* [X] Publish in npm
 
 ## License
 
