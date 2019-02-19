@@ -121,7 +121,7 @@ describe('When I create the VueSimpleTimeline component', () => {
     expect(time.attributes().style).toBe('min-width: 500px;')
   })
 
-  it('should wrap the content when it has above 50 characters and the prop contentSubstr is set to 50', () => {
+  it('should wrap the content when it has above 50 characters and the contentSubstr prop is set to 50', () => {
     const wrapper = createTimelineWrapper({ items, contentSubstr: 50 })
     const html = `<span class="content">
             Lorem ipsum dolor sit amet, consectetur adipiscing...
@@ -139,7 +139,7 @@ describe('When I create the VueSimpleTimeline component', () => {
     expect(content3.html()).toBe(html)
   })
 
-  it('should add a custom-class to the cards content when contentClass is set to custom-class', () => {
+  it('should add a custom-class to the cards content when contentClass prop is set to custom-class', () => {
     const wrapper = createTimelineWrapper({ items, contentClass: 'custom-class' })
 
     const content1 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time>span.content')
@@ -151,6 +151,21 @@ describe('When I create the VueSimpleTimeline component', () => {
       expect(arr[i].exists()).toBe(true)
       expect(arr[i].classes().length).toBe(2)
       expect(arr[i].classes()).toContainEqual('custom-class')
+    }
+  })
+
+  it('should add text-center class to all cards content when contentCentered prop is set to true', () => {
+    const wrapper = createTimelineWrapper({ items, contentCentered: true })
+
+    const content1 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time>span.content')
+    const content2 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:nth-child(2)>.time>span.content')
+    const content3 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:nth-child(3)>.time>span.content')
+    const arr = [content1, content2, content3]
+
+    for (var i = 0; i < 3; i++) {
+      expect(arr[i].exists()).toBe(true)
+      expect(arr[i].classes().length).toBe(2)
+      expect(arr[i].classes()).toContainEqual('text-center')
     }
   })
 })
