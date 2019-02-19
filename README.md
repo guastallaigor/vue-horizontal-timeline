@@ -107,7 +107,9 @@ This project follows the [commitlint](https://github.com/conventional-changelog/
 
 You can commit using `npm run commit` to help you with that.
 
-There's a `pre-push` hook that runs all the unit tests before you can push it. If an error occurs, an you can use the `npm run commit:retry` command that runs the previous `npm run commit` that you already filled.
+There's a `pre-push` hook that runs all the unit tests before you can push it.
+
+If an error occurs, you can use the `npm run commit:retry` command that runs the previous `npm run commit` that you already filled.
 
 ## TODO
 
