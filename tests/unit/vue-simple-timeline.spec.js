@@ -268,22 +268,53 @@ describe('When I create the VueSimpleTimeline component', () => {
     expect(wrapper.emitted('click')).toMatchObject([[expected]])
   })
 
-  // it('should have a blue border when itemUniqueKey and itemSelected is passed and a card is clicked', () => {
-  //   const itemSelected = {
-  //     title: '',
-  //     content: ''
-  //   }
-  //   const wrapper = createTimelineWrapper({ items, itemSelected, itemUniqueKey: 'title' })
-  //   const time = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time')
-  //   time.trigger('click')
-  //   const expected = {
-  //     title: 'Title example 1',
-  //     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex dolor, malesuada luctus scelerisque ac, auctor vitae risus. Vivamus risus dolor, faucibus a bibendum quis, facilisis eget odio. Nullam non condimentum orci, a cursus magna. Suspendisse tempor rutrum eros, non pellentesque odio commodo eu. Donec at volutpat enim. Vivamus mattis volutpat urna, sit amet vulputate mauris sollicitudin et. Proin consequat at dolor in sodales. Vestibulum vel porta turpis. Pellentesque sollicitudin justo est, ut dapibus felis luctus mollis. Suspendisse feugiat, metus ut auctor dictum, nulla dui fringilla nisl, a pulvinar ipsum justo non lacus. Integer vestibulum sapien metus, et congue felis efficitur iaculis. Aliquam et mi quis nulla molestie elementum. Vestibulum in nibh nibh.'
-  //   }
-  //   expect(time.exists()).toBe(true)
-  //   expect(wrapper.emitted('click')).toBeTruthy()
-  //   expect(wrapper.emitted('click')).toEqual([[expected]])
-  //   expect(time.classes().length).toBe(2)
-  //   expect(time.classes()).toContainEqual('border-blue')
-  // })
+  it('should have a blue border when itemUniqueKey and itemSelected is passed and a card is clicked', () => {
+    const itemSelected = {
+      title: 'title',
+      content: 'content'
+    }
+    const wrapper = createTimelineWrapper({ items, itemSelected, itemUniqueKey: 'title' })
+    const time = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time:first-child')
+    time.trigger('click')
+    const expected = {
+      title: 'Title example 1',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex dolor, malesuada luctus scelerisque ac, auctor vitae risus. Vivamus risus dolor, faucibus a bibendum quis, facilisis eget odio. Nullam non condimentum orci, a cursus magna. Suspendisse tempor rutrum eros, non pellentesque odio commodo eu. Donec at volutpat enim. Vivamus mattis volutpat urna, sit amet vulputate mauris sollicitudin et. Proin consequat at dolor in sodales. Vestibulum vel porta turpis. Pellentesque sollicitudin justo est, ut dapibus felis luctus mollis. Suspendisse feugiat, metus ut auctor dictum, nulla dui fringilla nisl, a pulvinar ipsum justo non lacus. Integer vestibulum sapien metus, et congue felis efficitur iaculis. Aliquam et mi quis nulla molestie elementum. Vestibulum in nibh nibh.'
+    }
+    setTimeout(() => {
+      expect(time.exists()).toBe(true)
+      expect(wrapper.emitted('click')).toBeTruthy()
+      expect(wrapper.emitted('click')).toEqual([[expected]])
+      expect(time.classes().length).toBe(2)
+      expect(time.classes()).toContainEqual('border-blue')
+    })
+  })
+
+  it('should match snapshot', () => {
+    const itemSelected = {
+      title: 'title',
+      content: 'content'
+    }
+    const wrapper = createTimelineWrapper({
+      items,
+      itemSelected,
+      itemUniqueKey: 'title',
+      titleAttr: 'title',
+      titleCentered: false,
+      titleClass: '',
+      titleSubstr: 18,
+      contentAttr: 'content',
+      contentCentered: false,
+      contentClass: '',
+      contentSubstr: 250,
+      hasSlot: false,
+      minWidth: '200px',
+      minHeight: '',
+      timelinePadding: '',
+      timelineBackground: '',
+      lineColor: '#03A9F4',
+      clickable: true
+    })
+
+    expect(wrapper.html()).toMatchSnapshot()
+  })
 })
