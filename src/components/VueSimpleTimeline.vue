@@ -2,8 +2,8 @@
   <div class="vue-simple-timeline" :style="setTimelineStyles">
     <section class="timeline">
       <ol>
-        <li v-for="(item, i) in items" :key="i" @click="cardClicked(item)" :style="setLineColor">
-          <div class="time" :class="getTimeClass(item)" :style="getTimeStyles">
+        <li v-for="(item, i) in items" :key="i" :style="setLineColor">
+          <div class="time" :class="getTimeClass(item)" :style="getTimeStyles" @click="cardClicked(item)">
             <slot v-if="hasSlot"/>
             <span
               class="title"
@@ -92,7 +92,7 @@ export default {
     },
     timelineBackground: {
       type: String,
-      default: '#E9E9E9'
+      default: ''
     },
     lineColor: {
       type: String,
