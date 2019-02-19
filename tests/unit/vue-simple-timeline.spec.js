@@ -145,11 +145,12 @@ describe('When I create the VueSimpleTimeline component', () => {
     const content1 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:first-child>.time>span.content')
     const content2 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:nth-child(2)>.time>span.content')
     const content3 = wrapper.find('.vue-simple-timeline>section.timeline>ol>li:nth-child(3)>.time>span.content')
+    const arr = [content1, content2, content3]
 
-    for (var i = 1; i <= 3; i++) {
-      expect(`${content}${i}`.exists()).toBe(true)
-      expect(`${content}${i}`.length).toBe(2)
-      expect(`${content}${i}`).toContainEqual('custom-class')
+    for (var i = 0; i < 3; i++) {
+      expect(arr[i].exists()).toBe(true)
+      expect(arr[i].classes().length).toBe(2)
+      expect(arr[i].classes()).toContainEqual('custom-class')
     }
   })
 })
