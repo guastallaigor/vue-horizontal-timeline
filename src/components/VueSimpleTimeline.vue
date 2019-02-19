@@ -31,8 +31,7 @@ export default {
   props: {
     items: {
       type: Array,
-      required: true,
-      default: () => ([])
+      required: true
     },
     itemSelected: {
       type: Object,
