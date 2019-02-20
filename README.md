@@ -9,11 +9,18 @@
   <a href="https://codepen.io/tutsplus/pen/ZKpNwm" target="_blank">Inspiration</a>
 </p>
 
+[![Version](https://img.shields.io/npm/v/vue-horizontal-timeline.svg)](https://github.com/guastallaigor/vue-horizontal-timeline/)
 [![buddy pipeline](https://app.buddy.works/limaguastallaigor/vue-horizontal-timeline/pipelines/pipeline/173812/badge.svg?token=830a75b934ef2291ac702693fd25c5ce1bda7a85057312f916c28ef27699b9c1 "buddy pipeline")](https://app.buddy.works/limaguastallaigor/vue-horizontal-timeline/pipelines/pipeline/173812)
 [![buddy pipeline](https://app.buddy.works/limaguastallaigor/vue-horizontal-timeline/pipelines/pipeline/173811/badge.svg?token=830a75b934ef2291ac702693fd25c5ce1bda7a85057312f916c28ef27699b9c1 "buddy pipeline")](https://app.buddy.works/limaguastallaigor/vue-horizontal-timeline/pipelines/pipeline/173811)
 [![codecov](https://codecov.io/gh/guastallaigor/vue-horizontal-timeline/branch/master/graph/badge.svg)](https://codecov.io/gh/guastallaigor/vue-horizontal-timeline)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 [![Greenkeeper badge](https://badges.greenkeeper.io/guastallaigor/vue-horizontal-timeline.svg)](https://greenkeeper.io/)
+[![Downloads](https://img.shields.io/npm/dt/vue-horizontal-timeline.svg)](https://github.com/guastallaigor/vue-horizontal-timeline/)
+[![Dependencies](https://img.shields.io/david/guastallaigor/vue-horizontal-timeline.svg)](https://github.com/guastallaigor/vue-horizontal-timeline/)
+
+## Demo
+
+[![Edit Checkbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/o4o10xynoz)
 
 ## How to install
 
@@ -94,7 +101,7 @@ plugins: [
 
 | Property name       | Type    | Default   | Description                                                                                    |
 |---------------------|--------:|:---------:|------------------------------------------------------------------------------------------------|
-| items               | Array   | []        | Array of objects to be displayed. Must have at least a content property                        |
+| items               | Array   | null      | Array of objects to be displayed. Must have at least a content property                        |
 | item-selected       | Object  | {}        | Object that is set when it is clicked. Note that `clickable` prop must be set to true          |
 | item-unique-key     | String  | ''        | Key to set a blue border to the card when it is clicked (`clickable` prop must be set to true) |
 | title-attr          | String  | 'title'   | Name of the property inside the objects, that are in the items array, to set the cards title   |
@@ -152,8 +159,7 @@ If an error occurs, you can use the `npm run commit:retry` command that runs the
 ## TODO
 
 * [X] Add 100% test coverage
-* [ ] Add demo website/code pen
-* [ ] Publish storybook
+* [X] Add demo website/code pen
 * [X] Publish in npm
 
 ## License
