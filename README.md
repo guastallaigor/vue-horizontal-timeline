@@ -49,7 +49,7 @@ $ yarn add sass-loader node-sass -D
 ## Quick start
 ### Vue.js
 
-You can import in you `main.js` file.
+You can import in you `main.js` file
 
 ```js
 import Vue from 'vue'
@@ -58,7 +58,7 @@ import VueHorizontalTimeline from 'vue-horizontal-timeline'
 Vue.use(VueHorizontalTimeline)
 ```
 
-Or locally in any component:
+Or locally in any component
 
 ```js
 import { VueHorizontalTimeline } from 'vue-horizontal-timeline'
@@ -72,7 +72,7 @@ export default {
 
 ### Nuxt.js
 
-You can import in a Nuxt.js plugin
+You can import as a Nuxt.js plugin
 
 `~/plugins/vue-horizontal-timeline.js`
 ```js
@@ -124,7 +124,7 @@ plugins: [
 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/guastallaigor/vue-horizontal-timeline/issues)
 
-Fork the project and enter this commands in your terminal:
+Fork the project and enter this commands in your terminal
 
 ```sh
 git clone https://github.com/YOUR_GITHUB_USERNAME/vue-horizontal-timeline.git
@@ -133,7 +133,7 @@ yarn
 ```
 
 ### Storybook
-For visual testing, this project contains storybook which you can run by doing the next command:
+For visual testing, this project contains storybook which you can run by doing the next command
 ```sh
 $ yarn storybook:serve
 ```
@@ -141,7 +141,7 @@ $ yarn storybook:serve
 ### Jest
 Before making the PR, if you changed something that needs to be tested, please make the tests inside the `tests/unit` folder.
 
-To run the tests, you can use the next command:
+To run the tests, you can use the next command
 
 ```sh
 $ yarn test:unit
