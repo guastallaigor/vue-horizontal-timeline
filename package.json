@@ -23,7 +23,7 @@
     "@commitlint/config-conventional": "^7.5.0",
     "@storybook/addon-actions": "^5.0.0",
     "@storybook/addon-backgrounds": "^4.1.11",
-    "@storybook/addon-knobs": "^4.1.0",
+    "@storybook/addon-knobs": "^5.0.0",
     "@storybook/addon-links": "^4.1.0",
     "@storybook/addon-notes": "^4.1.0",
     "@vue/cli-plugin-babel": "^3.4.0",
