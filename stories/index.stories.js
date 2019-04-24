@@ -2,11 +2,10 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs, boolean, object, text, number } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
-import { withBackgrounds } from '@storybook/addon-backgrounds'
 import VueHorizontalTimeline from '../src/components/VueHorizontalTimeline'
 
 const timelineStory = storiesOf('VueHorizontalTimeline', module)
-  .addDecorator(withBackgrounds([
+  .addParameters({ backgrounds: [
     { name: 'Blue', value: 'blue' },
     { name: 'Green', value: 'green' },
     { name: 'Yellow', value: 'yellow' },
@@ -15,7 +14,7 @@ const timelineStory = storiesOf('VueHorizontalTimeline', module)
     { name: 'Purple', value: 'purple' },
     { name: 'Black', value: 'black' },
     { name: 'White', value: 'white', default: true }
-  ]))
+  ] })
   .addDecorator(withKnobs)
 
 timelineStory.add('Default', () => {
