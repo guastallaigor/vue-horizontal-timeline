@@ -17,6 +17,7 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/guastallaigor/vue-horizontal-timeline.svg)](https://greenkeeper.io/)
 [![Downloads](https://img.shields.io/npm/dt/vue-horizontal-timeline.svg)](https://github.com/guastallaigor/vue-horizontal-timeline/)
 [![Dependencies](https://img.shields.io/david/guastallaigor/vue-horizontal-timeline.svg)](https://github.com/guastallaigor/vue-horizontal-timeline/)
+[![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/guastallaigor)
 
 ## Demo
 
@@ -95,6 +96,28 @@ plugins: [
 <template>
   <vue-horizontal-timeline :items="items"/>
 </template>
+
+<script>
+export default {  
+  data() {
+    const example1 = {
+      title: 'Title example 1',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex dolor, malesuada luctus scelerisque ac, auctor vitae risus. Vivamus risus dolor, faucibus a bibendum quis, facilisis eget odio.'
+    }
+    const example2 = {
+      title: 'Title example 2',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex dolor, malesuada luctus scelerisque ac, auctor vitae risus. Vivamus risus dolor, faucibus a bibendum quis, facilisis eget odio.'
+    }
+    const example3 = {
+      title: 'Title example 3',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex dolor, malesuada luctus scelerisque ac, auctor vitae risus. Vivamus risus dolor, faucibus a bibendum quis, facilisis eget odio.'
+    }
+    const items = [example1, example2, example3]
+
+    return { items }
+  }
+}
+</script>
 ```
 
 ## Props
