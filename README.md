@@ -179,6 +179,8 @@ There's a `pre-push` hook that runs all the unit tests before you can push it.
 
 If an error occurs, you can use the `npm run commit:retry` command that runs the previous `npm run commit` that you already filled.
 
+<a href="https://www.buymeacoffee.com/guastallaigor" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+
 ## TODO
 
 * [X] Add 100% test coverage
