@@ -70,10 +70,10 @@ timelineStory.add('Default', () => {
       },
       titleClass: {
         type: String,
-        default: boolean('Set title custom class (color red)', false)
+        default: text('Set title custom class (color red)', '')
       },
       titleSubstr: {
-        type: String,
+        type: Number,
         default: number('Title substring', 18)
       },
       contentAttr: {
@@ -86,7 +86,7 @@ timelineStory.add('Default', () => {
       },
       contentClass: {
         type: String,
-        default: boolean('Set content custom class (color red)', false)
+        default: text('Set content custom class (color red)', '')
       },
       contentSubstr: {
         type: Number,
