@@ -6,11 +6,11 @@
   "homepage": "https://github.com/guastallaigor/vue-horizontal-timeline#readme",
   "author": "Igor Guastalla de Lima",
   "scripts": {
-    "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
     "storybook:build": "vue-cli-service storybook:build -c config/storybook",
     "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
     "test:unit": "vue-cli-service test:unit",
+    "test:watch": "vue-cli-service test:unit --watch",
     "commit": "git-cz",
     "commit:retry": "git-cz --retry",
     "commitmsg": "commitlint -e"
