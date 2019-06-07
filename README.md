@@ -37,16 +37,6 @@ $ npm install vue-horizontal-timeline --save
 $ yarn add vue-horizontal-timeline
 ```
 
-You may also need to install `node-sass` and `sass-loader` as a `devDependency`:
-
-```bash
-$ npm install sass-loader node-sass --save-dev
-```
-
-```bash
-$ yarn add sass-loader node-sass -D
-```
-
 ## Quick start
 ### Vue.js
 
