@@ -82,6 +82,8 @@ describe('When I create the VueHorizontalTimeline component', () => {
     expect(li1.attributes().style).toBe('background: black;')
     expect(li2.attributes().style).toBe('background: black;')
     expect(li3.attributes().style).toBe('background: black;')
+    expect(wrapper.props().lineColor).toBe('black')
+    expect(wrapper.vm.setLineColor).toBe('background: black')
   })
 
   it('should change the background color of the timeline to black when the prop timelineBackground is set to black', () => {
