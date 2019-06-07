@@ -86,6 +86,23 @@ describe('When I create the VueHorizontalTimeline component', () => {
     expect(wrapper.vm.setLineColor).toBe('background: black')
   })
 
+  it('should remove the lineColor', () => {
+    const wrapper = createTimelineWrapper({ items, lineColor: '' })
+
+    const lis = wrapper.findAll('.vue-horizontal-timeline>section.timeline>ol>li')
+    const li1 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:first-child')
+    const li2 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:nth-child(2)')
+    const li3 = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:nth-child(3)')
+
+    // one more is created empty
+    expect(lis.length).toBe(4)
+    expect(li1.attributes().style).toBe(undefined)
+    expect(li2.attributes().style).toBe(undefined)
+    expect(li3.attributes().style).toBe(undefined)
+    expect(wrapper.props().lineColor).toBe('')
+    expect(wrapper.vm.setLineColor).toBe('')
+  })
+
   it('should change the background color of the timeline to black when the prop timelineBackground is set to black', () => {
     const wrapper = createTimelineWrapper({ items, timelineBackground: 'black' })
 
@@ -270,12 +287,9 @@ describe('When I create the VueHorizontalTimeline component', () => {
     expect(wrapper.emitted('click')).toMatchObject([[expected]])
   })
 
-  it('should have a blue border when itemUniqueKey and itemSelected is passed and a card is clicked', () => {
-    const itemSelected = {
-      title: 'title',
-      content: 'content'
-    }
-    const wrapper = createTimelineWrapper({ items, itemSelected, itemUniqueKey: 'title' })
+  it('should have a blue border when itemUniqueKey and itemSelected is passed and a card is clicked', (done) => {
+    const itemSelected = items[0]
+    const wrapper = createTimelineWrapper({ items, itemSelected, itemUniqueKey: 'title', clickable: true })
     const time = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:first-child>.time:first-child')
     time.trigger('click')
     const expected = {
@@ -288,6 +302,7 @@ describe('When I create the VueHorizontalTimeline component', () => {
     setTimeout(() => {
       expect(time.classes().length).toBe(2)
       expect(time.classes()).toContainEqual('border-blue')
+      done()
     })
   })
 

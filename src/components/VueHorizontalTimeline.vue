@@ -104,9 +104,7 @@ export default {
   },
   filters: {
     textSubstr (value, qtd = 250, mask = '...') {
-      if (!value) return ''
-
-      return value.length > qtd ? `${value.substring(0, qtd)}${mask}` : value
+      return value && value.length > qtd ? `${value.substring(0, qtd)}${mask}` : value
     }
   },
   computed: {
