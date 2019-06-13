@@ -40,7 +40,7 @@ $ yarn add vue-horizontal-timeline
 ## Quick start
 ### Vue.js
 
-You can import in you `main.js` file
+You can import in your `main.js` file
 
 ```js
 import Vue from 'vue'
