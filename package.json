@@ -37,7 +37,7 @@
     "babel-jest": "^24.7.1",
     "commitizen": "^3.1.1",
     "core-js": "2.6.5",
-    "eslint": "^5.16.0",
+    "eslint": "^6.0.0",
     "eslint-plugin-vue": "^5.2.2",
     "husky": "^2.4.1",
     "vue-cli-plugin-storybook": "^0.6.1",
