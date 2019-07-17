@@ -1,5 +1,5 @@
 - pipeline: "Unit Tests Check Health"
-  trigger_mode: "ON_EVERY_PUSH"
+  trigger_mode: "MANUAL"
   ref_name: "*"
   ref_type: "WILDCARD"
   clone_depth: 1
@@ -38,7 +38,7 @@
       shell: "BASH"
       trigger_condition: "ON_CHANGE"
 - pipeline: "Linter Health Check"
-  trigger_mode: "ON_EVERY_PUSH"
+  trigger_mode: "MANUAL"
   ref_name: "*"
   ref_type: "WILDCARD"
   clone_depth: 1
