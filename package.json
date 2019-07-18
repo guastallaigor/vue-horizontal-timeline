@@ -36,7 +36,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.2",
     "babel-jest": "^24.7.1",
-    "commitizen": "^3.1.1",
+    "commitizen": "^4.0.0",
     "core-js": "2.6.5",
     "eslint": "^6.0.1",
     "eslint-plugin-vue": "^5.2.3",
