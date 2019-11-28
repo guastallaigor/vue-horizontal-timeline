@@ -5,16 +5,20 @@ import { action } from '@storybook/addon-actions'
 import VueHorizontalTimeline from '../src/components/VueHorizontalTimeline'
 
 const timelineStory = storiesOf('VueHorizontalTimeline', module)
-  .addParameters({ backgrounds: [
-    { name: 'Blue', value: 'blue' },
-    { name: 'Green', value: 'green' },
-    { name: 'Yellow', value: 'yellow' },
-    { name: 'Orange', value: 'orange' },
-    { name: 'Red', value: 'red' },
-    { name: 'Purple', value: 'purple' },
-    { name: 'Black', value: 'black' },
-    { name: 'White', value: 'white', default: true }
-  ] })
+  .addParameters(
+    {
+      backgrounds: [
+        { name: 'Blue', value: 'blue' },
+        { name: 'Green', value: 'green' },
+        { name: 'Yellow', value: 'yellow' },
+        { name: 'Orange', value: 'orange' },
+        { name: 'Red', value: 'red' },
+        { name: 'Purple', value: 'purple' },
+        { name: 'Black', value: 'black' },
+        { name: 'White', value: 'white', default: true }
+      ]
+    }
+  )
   .addDecorator(withKnobs)
 
 timelineStory.add('Default', () => {
@@ -47,7 +51,7 @@ timelineStory.add('Default', () => {
     props: {
       items: {
         type: Array,
-        default: [ ...items.map(it => ({ ...it })) ]
+        default: [...items.map(it => ({ ...it }))]
       },
       item: {
         type: Object,
