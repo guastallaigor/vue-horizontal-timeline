@@ -38,7 +38,7 @@
     "babel-jest": "^24.9.0",
     "commitizen": "^4.0.3",
     "core-js": "3.4.5",
-    "eslint": "^6.7.1",
+    "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
