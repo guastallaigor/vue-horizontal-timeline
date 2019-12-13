@@ -16,7 +16,7 @@
     "commitmsg": "commitlint -e"
   },
   "dependencies": {
-    "vue": "^2.6.10"
+    "vue": "^2.6.11"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.7.4",
