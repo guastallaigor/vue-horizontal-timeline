@@ -19,7 +19,7 @@
     "vue": "^2.6.10"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-env": "^7.7.7",
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
     "@storybook/addon-actions": "^5.2.6",
