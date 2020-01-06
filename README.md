@@ -18,10 +18,15 @@
 [![Downloads](https://img.shields.io/npm/dt/vue-horizontal-timeline.svg)](https://github.com/guastallaigor/vue-horizontal-timeline/)
 [![Dependencies](https://img.shields.io/david/guastallaigor/vue-horizontal-timeline.svg)](https://github.com/guastallaigor/vue-horizontal-timeline/)
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/guastallaigor)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d099ae26-8ac0-447f-91b2-b079e7b2213f/deploy-status)](https://app.netlify.com/sites/vue-horizontal-timeline/deploys)
 
 ## Demo
 
 [![Edit Checkbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/o4o10xynoz)
+
+## Storybook
+
+Go to https://vue-horizontal-timeline.netlify.com
 
 ## How to install
 
