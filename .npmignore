@@ -1,6 +1,6 @@
 # User & editor settings
 .editorconfig
-.huskyrc
+.huskyrc.json
 .vscode
 jest.config.js
 postcss.config.js
@@ -17,3 +17,5 @@ storybook-static
 config
 stories
 tests
+coverage
+.eslintrc.js
