@@ -4,7 +4,7 @@
       <ol>
         <li v-for="(item, i) in items" :key="i" :style="setLineColor">
           <div class="time" :class="getTimeClass(item)" :style="getTimeStyles" @click="cardClicked(item)">
-            <slot v-if="hasSlot"/>
+            <slot v-if="hasSlot" v-bind:item="item"/>
             <span
               class="title"
               v-if="!hasSlot && item[titleAttr]"
