@@ -134,7 +134,6 @@ plugins: ["~/plugins/vue-horizontal-timeline.js"];
 | content-centered    | Boolean |   false   | Centralizes all the cards content text                                                         |
 | content-class       |  String |    ''     | If you want to set a custom class to the cards content, set it here                            |
 | content-substr      |  String |    250    | Number of characters to display inside the cards content. Above this, will set a '...' mask    |
-| has-slot            |  String |   false   | Set to true if you pass a `<slot>` to override `title` and `content` attributes                |
 | min-width           |  String |  '200px'  | Min-width of the timeline                                                                      |
 | min-height          |  String |    ''     | Min-height of the timeline                                                                     |
 | timeline-padding    |  String |    ''     | Padding of the timeline                                                                        |

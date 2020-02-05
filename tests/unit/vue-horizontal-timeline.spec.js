@@ -50,7 +50,7 @@ describe('When I create the VueHorizontalTimeline component', () => {
 
   it('should print html inside slot', () => {
     const html = '<p id="find-this-id">VueHorizontalTimeline</p>'
-    const wrapper = createTimelineWrapper({ items, hasSlot: true }, html)
+    const wrapper = createTimelineWrapper({ items }, html)
     const slot = wrapper.find('p#find-this-id')
 
     expect(wrapper.exists()).toBe(true)
@@ -323,7 +323,6 @@ describe('When I create the VueHorizontalTimeline component', () => {
       contentCentered: false,
       contentClass: '',
       contentSubstr: 250,
-      hasSlot: false,
       minWidth: '200px',
       minHeight: '',
       timelinePadding: '',

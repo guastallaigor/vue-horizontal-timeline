@@ -4,16 +4,16 @@
       <ol>
         <li v-for="(item, i) in items" :key="i" :style="setLineColor">
           <div class="time" :class="getTimeClass(item)" :style="getTimeStyles" @click="cardClicked(item)">
-            <slot v-if="hasSlot" v-bind:item="item"/>
+            <slot v-if="$slots.default" v-bind:item="item"/>
             <span
               class="title"
-              v-if="!hasSlot && item[titleAttr]"
+              v-if="!$slots.default && item[titleAttr]"
               :class="getTitleClasses">
               {{ item[titleAttr] | textSubstr(titleSubstr) }}
             </span>
             <span
               class="content"
-              v-if="!hasSlot && item[contentAttr]"
+              v-if="!$slots.default && item[contentAttr]"
               :class="getContentClasses">
               {{ item[contentAttr] | textSubstr(contentSubstr) }}
             </span>
@@ -72,10 +72,6 @@ export default {
     contentSubstr: {
       type: Number,
       default: 250
-    },
-    hasSlot: {
-      type: Boolean,
-      default: false
     },
     minWidth: {
       type: String,
