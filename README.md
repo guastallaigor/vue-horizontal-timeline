@@ -10,8 +10,7 @@
 </p>
 
 [![Version](https://img.shields.io/npm/v/vue-horizontal-timeline.svg)](https://github.com/guastallaigor/vue-horizontal-timeline/)
-[![buddy pipeline](https://app.buddy.works/vue-horizontal-timeline/vue-horizontal-timeline/pipelines/pipeline/231897/badge.svg?token=1f71c7474ab741b4913e6e679ce6f6b60a050788dd3565fd84476fc5120cf9ce "buddy pipeline")](https://app.buddy.works/vue-horizontal-timeline/vue-horizontal-timeline/pipelines/pipeline/231897)
-[![buddy pipeline](https://app.buddy.works/vue-horizontal-timeline/vue-horizontal-timeline/pipelines/pipeline/231896/badge.svg?token=1f71c7474ab741b4913e6e679ce6f6b60a050788dd3565fd84476fc5120cf9ce "buddy pipeline")](https://app.buddy.works/vue-horizontal-timeline/vue-horizontal-timeline/pipelines/pipeline/231896)
+[![CircleCI](https://badgen.net/circleci/github/guastallaigor/vue-horizontal-timeline/master)](https://circleci.com/gh/guastallaigor/vue-list-picker/tree/master)
 [![codecov](https://codecov.io/gh/guastallaigor/vue-horizontal-timeline/branch/master/graph/badge.svg)](https://codecov.io/gh/guastallaigor/vue-horizontal-timeline)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 [![Greenkeeper badge](https://badges.greenkeeper.io/guastallaigor/vue-horizontal-timeline.svg)](https://greenkeeper.io/)
