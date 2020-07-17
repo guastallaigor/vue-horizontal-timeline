@@ -24,11 +24,6 @@ describe('When I create the VueHorizontalTimeline component', () => {
     })
   }
 
-  it('should be a Vue instance', () => {
-    const wrapper = createTimelineWrapper({ items })
-    expect(wrapper.find(VueHorizontalTimeline).isVueInstance()).toBe(true)
-  })
-
   it('should add a text-center class inside the title if titleCentered prop is added', () => {
     const wrapper = createTimelineWrapper({ items, titleCentered: true })
     const timelineClasses = wrapper.find('.vue-horizontal-timeline>section.timeline>ol>li:first-child>.time>span').classes()

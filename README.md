@@ -13,10 +13,8 @@
 [![CircleCI](https://badgen.net/circleci/github/guastallaigor/vue-horizontal-timeline/master)](https://circleci.com/gh/guastallaigor/vue-list-picker/tree/master)
 [![codecov](https://codecov.io/gh/guastallaigor/vue-horizontal-timeline/branch/master/graph/badge.svg)](https://codecov.io/gh/guastallaigor/vue-horizontal-timeline)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
-[![Greenkeeper badge](https://badges.greenkeeper.io/guastallaigor/vue-horizontal-timeline.svg)](https://greenkeeper.io/)
 [![Downloads](https://img.shields.io/npm/dt/vue-horizontal-timeline.svg)](https://github.com/guastallaigor/vue-horizontal-timeline/)
 [![Dependencies](https://img.shields.io/david/guastallaigor/vue-horizontal-timeline.svg)](https://github.com/guastallaigor/vue-horizontal-timeline/)
-[![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/guastallaigor)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d099ae26-8ac0-447f-91b2-b079e7b2213f/deploy-status)](https://app.netlify.com/sites/vue-horizontal-timeline/deploys)
 
 ## Demo
@@ -121,7 +119,7 @@ plugins: ["~/plugins/vue-horizontal-timeline.js"];
 ## Props
 
 | Property name       |    Type |  Default  | Description                                                                                    |
-| ------------------- | ------: | :-------: | ---------------------------------------------------------------------------------------------- |
+| ------------------- | ------- | --------- | ---------------------------------------------------------------------------------------------- |
 | items               |   Array |   null    | Array of objects to be displayed. Must have at least a content property                        |
 | item-selected       |  Object |    {}     | Object that is set when it is clicked. Note that `clickable` prop must be set to true          |
 | item-unique-key     |  String |    ''     | Key to set a blue border to the card when it is clicked (`clickable` prop must be set to true) |
@@ -144,12 +142,14 @@ plugins: ["~/plugins/vue-horizontal-timeline.js"];
 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/guastallaigor/vue-horizontal-timeline/issues)
 
+> **Note**: Contributions are very welcomed, however is very important to open a new issue using the issue template **before** you start working on anything, so we can discuss it before hand
+
 Fork the project and enter this commands in your terminal
 
 ```sh
-git clone https://github.com/YOUR_GITHUB_USERNAME/vue-horizontal-timeline.git
-cd vue-horizontal-timeline
-yarn
+$ git clone https://github.com/YOUR_GITHUB_USERNAME/vue-horizontal-timeline.git
+$ cd vue-horizontal-timeline
+$ yarn
 ```
 
 ### Storybook
@@ -157,7 +157,7 @@ yarn
 For visual testing, this project contains storybook which you can run by doing the next command
 
 ```sh
-$ yarn storybook:serve
+$ yarn storybook
 ```
 
 ### Jest
@@ -170,6 +170,12 @@ To run the tests, you can use the next command
 $ yarn test:unit
 ```
 
+### CSS
+
+All the CSS is at `src/assets/css/style.scss`
+
+If you make any changes in that file, you will need to run `yarn build` to build it, because the component uses the minified version at `src/assets/css/style.min.css`
+
 ### Commitlint
 
 This project follows the [commitlint](https://github.com/conventional-changelog/commitlint) guidelines, with minor changes.
@@ -179,12 +185,6 @@ You can commit using `npm run commit` to help you with that.
 There's a `pre-push` hook that runs all the unit tests before you can push it.
 
 If an error occurs, you can use the `npm run commit:retry` command that runs the previous `npm run commit` that you already filled.
-
-## TODO
-
-- [x] Add 100% test coverage
-- [x] Add demo website/code pen
-- [x] Publish in npm
 
 <a href="https://www.buymeacoffee.com/guastallaigor" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
