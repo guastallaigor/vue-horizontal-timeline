@@ -85,7 +85,7 @@ export const Default = () => {
       },
       titleClass: {
         type: String,
-        default: text('Set title custom class (color red)', '')
+        default: text('Set title custom class (for this example if you type anything will set the color red)', '')
       },
       titleSubstr: {
         type: Number,
@@ -101,7 +101,7 @@ export const Default = () => {
       },
       contentClass: {
         type: String,
-        default: text('Set content custom class (color red)', '')
+        default: text('Set content custom class (for this example if you type anything will set the color red)', '')
       },
       contentSubstr: {
         type: Number,
@@ -208,7 +208,7 @@ export const Slot = () => {
       },
       titleClass: {
         type: String,
-        default: text('Set title custom class (color red)', '')
+        default: text('Set title custom class (for this example if you type anything will set the color red)', '')
       },
       titleSubstr: {
         type: Number,
@@ -224,7 +224,7 @@ export const Slot = () => {
       },
       contentClass: {
         type: String,
-        default: text('Set content custom class (color red)', '')
+        default: text('Set content custom class (for this example if you type anything will set the color red)', '')
       },
       contentSubstr: {
         type: Number,
