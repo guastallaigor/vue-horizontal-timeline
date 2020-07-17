@@ -1,16 +1,10 @@
 import { boolean, object, text, number } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
-import { addDecorator, addParameters } from '@storybook/vue'
+import { addDecorator } from '@storybook/vue'
 import { withA11y } from '@storybook/addon-a11y'
 
 import VueHorizontalTimeline from '../src/components/VueHorizontalTimeline'
 import '../.storybook/storybook.css'
-
-addParameters({
-  docs: {
-    inlineStories: true
-  }
-})
 
 addDecorator(withA11y)
 
