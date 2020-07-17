@@ -157,7 +157,7 @@ $ yarn
 For visual testing, this project contains storybook which you can run by doing the next command
 
 ```sh
-$ yarn storybook:serve
+$ yarn storybook
 ```
 
 ### Jest

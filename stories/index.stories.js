@@ -12,6 +12,8 @@ addParameters({
   }
 })
 
+addDecorator(withA11y)
+
 export default {
   title: 'VueHorizontalTimeline',
   component: VueHorizontalTimeline
@@ -284,5 +286,3 @@ export const Slot = () => {
 
 Default.story = { parameters }
 Slot.story = { parameters }
-
-addDecorator(withA11y)

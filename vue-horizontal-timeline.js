@@ -1,6 +1,6 @@
-import VueHorizontalTimeline from './src/components/VueHorizontalTimeline.vue'
+import VueHorizontalTimeline from './src/components/VueHorizontalTimeline'
 
-// Export components
+// Components
 const Components = {
   VueHorizontalTimeline
 }
