@@ -56,6 +56,7 @@ Or locally in any component
 
 ```js
 import { VueHorizontalTimeline } from "vue-horizontal-timeline";
+// In v0.8+ you don't need the brackets above
 
 export default {
   components: {

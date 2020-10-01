@@ -1,11 +1,11 @@
 // Import vue component
-import component from './src/components/VueHorizontalTimeline.vue'
+import VueHorizontalTimeline from './src/components/VueHorizontalTimeline.vue'
 
 // install function executed by Vue.use()
 const install = function (Vue) {
   if (install.installed) return
   install.installed = true
-  Vue.component('VueHorizontalTimeline', component)
+  Vue.component('VueHorizontalTimeline', VueHorizontalTimeline)
 }
 
 // Create module definition for Vue.use()
@@ -30,7 +30,10 @@ if (GlobalVue) {
 
 // Inject install function into component - allows component
 // to be registered via Vue.use() as well as Vue.component()
-component.install = install
+VueHorizontalTimeline.install = install
 
 // Export component by default
-export default component
+export default VueHorizontalTimeline
+
+// Export single (backwards compatibility)
+export { VueHorizontalTimeline }
