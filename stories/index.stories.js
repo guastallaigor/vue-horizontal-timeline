@@ -4,26 +4,27 @@ import { addDecorator } from '@storybook/vue'
 import { withA11y } from '@storybook/addon-a11y'
 
 import VueHorizontalTimeline from '../src/components/VueHorizontalTimeline'
-import '../.storybook/storybook.css'
 
 addDecorator(withA11y)
 
 export default {
   title: 'VueHorizontalTimeline',
-  component: VueHorizontalTimeline
-}
-
-const parameters = {
-  backgrounds: [
-    { name: 'Blue', value: 'blue' },
-    { name: 'Green', value: 'green' },
-    { name: 'Yellow', value: 'yellow' },
-    { name: 'Orange', value: 'orange' },
-    { name: 'Red', value: 'red' },
-    { name: 'Purple', value: 'purple' },
-    { name: 'Black', value: 'black' },
-    { name: 'White', value: 'white', default: true }
-  ]
+  component: VueHorizontalTimeline,
+  parameters: {
+    backgrounds: {
+      default: 'white',
+      values: [
+        { name: 'Blue', value: 'blue' },
+        { name: 'Green', value: 'green' },
+        { name: 'Yellow', value: 'yellow' },
+        { name: 'Orange', value: 'orange' },
+        { name: 'Red', value: 'red' },
+        { name: 'Purple', value: 'purple' },
+        { name: 'Black', value: 'black' },
+        { name: 'White', value: 'white' }
+      ]
+    }
+  }
 }
 
 export const Default = () => {
@@ -277,6 +278,3 @@ export const Slot = () => {
     </vue-horizontal-timeline>`
   }
 }
-
-Default.story = { parameters }
-Slot.story = { parameters }
