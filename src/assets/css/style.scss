@@ -48,7 +48,7 @@
 				&:last-child {
 					width: 330px;
 				}
-				&:not(:last-child) {
+				&.add-step:not(:last-child) {
 					padding-right: 0px;
 					margin-right: 0px;
 					&::after {

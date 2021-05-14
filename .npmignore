@@ -19,3 +19,4 @@ stories
 tests
 coverage
 .eslintrc.js
+.husky

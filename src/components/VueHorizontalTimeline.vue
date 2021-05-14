@@ -2,8 +2,18 @@
   <div class="vue-horizontal-timeline" :style="setTimelineStyles">
     <section class="timeline">
       <ol>
-        <li v-for="(item, i) in items" :key="i" :style="setLineColor">
-          <div class="time" :class="getTimeClass(item)" :style="getTimeStyles" @click="cardClicked(item)">
+        <li
+          v-for="(item, i) in items"
+          :key="i"
+          :style="setLineColor"
+          :class="{'add-step': $scopedSlots.default || item[titleAttr] || item[contentAttr]}"
+        >
+          <div
+            v-if="$scopedSlots.default || item[titleAttr] || item[contentAttr]"
+            class="time"
+            :class="getTimeClass(item)"
+            :style="getTimeStyles" @click="cardClicked(item)"
+          >
             <slot v-if="$scopedSlots.default" v-bind:item="item"/>
             <span
               class="title"
