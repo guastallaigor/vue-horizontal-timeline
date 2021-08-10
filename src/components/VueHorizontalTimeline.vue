@@ -6,12 +6,12 @@
           v-for="(item, i) in items"
           :key="i"
           :style="setLineColor"
-          :class="{'add-step': $scopedSlots.default || item[titleAttr] || item[contentAttr]}"
+          :class="[{'add-step': $scopedSlots.default || item[titleAttr] || item[contentAttr]}, item.stepCssClass]"
         >
           <div
             v-if="$scopedSlots.default || item[titleAttr] || item[contentAttr]"
             class="time"
-            :class="getTimeClass(item)"
+            :class="[getTimeClass(item), item.boxCssClass]"
             :style="getTimeStyles" @click="cardClicked(item)"
           >
             <slot v-if="$scopedSlots.default" v-bind:item="item"/>
@@ -182,3 +182,13 @@ export default {
 </script>
 
 <style src="../assets/css/style.min.css" scoped></style>
+
+<style>
+.has-color-red {
+  color: red !important;
+}
+
+.has-step-green::after {
+  background: green !important;
+}
+</style>
