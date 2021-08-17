@@ -14,3 +14,11 @@ html, body, #root {
 .custom-class {
   color: red;
 }
+
+.has-color-red {
+  color: red !important;
+}
+
+.has-step-green::after {
+  background: green !important;
+}
