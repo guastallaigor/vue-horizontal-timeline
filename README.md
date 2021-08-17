@@ -139,6 +139,30 @@ plugins: ["~/plugins/vue-horizontal-timeline.js"];
 | line-color          | String  | '#03A9F4' | Color of the line inside the timeline                                                          |
 | clickable           | Boolean | true      | Makes the card clickable that returns the object                                               |
 
+You can also change the step color and the style of each item using the `stepCssClass` and `boxCssClass` attributes inside each item:
+
+```js
+const example1 = {
+  title: "Title example 1",
+  content:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex dolor, malesuada luctus scelerisque ac, auctor vitae risus. Vivamus risus dolor, faucibus a bibendum quis, facilisis eget odio.",
+  stepCssClass: 'has-step-green',
+  boxCssClass: 'has-color-red'
+};
+```
+
+```html
+<style>
+.has-color-red {
+  color: red !important;
+}
+
+.has-step-green::after {
+  background: green !important;
+}
+</style>
+```
+
 ## Development
 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/guastallaigor/vue-horizontal-timeline/issues)

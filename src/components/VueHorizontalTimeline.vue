@@ -182,13 +182,3 @@ export default {
 </script>
 
 <style src="../assets/css/style.min.css" scoped></style>
-
-<style>
-.has-color-red {
-  color: red !important;
-}
-
-.has-step-green::after {
-  background: green !important;
-}
-</style>
