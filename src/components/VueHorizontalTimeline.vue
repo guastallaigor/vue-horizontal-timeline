@@ -14,7 +14,7 @@
             :class="[getTimeClass(item), item.boxCssClass]"
             :style="getTimeStyles" @click="cardClicked(item)"
           >
-            <slot v-if="$scopedSlots.default" v-bind:item="item"/>
+            <slot v-if="$scopedSlots.default" v-bind:item="item" v-bind:index="i"/>
             <span
               class="title"
               v-if="!$scopedSlots.default && item[titleAttr]"
