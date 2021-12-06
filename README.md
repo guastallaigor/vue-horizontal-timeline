@@ -14,7 +14,6 @@
 [![codecov](https://codecov.io/gh/guastallaigor/vue-horizontal-timeline/branch/master/graph/badge.svg)](https://codecov.io/gh/guastallaigor/vue-horizontal-timeline)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 [![Downloads](https://img.shields.io/npm/dt/vue-horizontal-timeline.svg)](https://github.com/guastallaigor/vue-horizontal-timeline/)
-[![Dependencies](https://img.shields.io/david/guastallaigor/vue-horizontal-timeline.svg)](https://github.com/guastallaigor/vue-horizontal-timeline/)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d099ae26-8ac0-447f-91b2-b079e7b2213f/deploy-status)](https://app.netlify.com/sites/vue-horizontal-timeline/deploys)
 
 ## Demo
