@@ -3,7 +3,7 @@
   <h1>Vue Horizontal Timeline</h1>
 </div>
 <p align="center">
-  Just a simple horizontal timeline component made with Vue.js.
+  Just a simple horizontal timeline component made with Vue.js (works with Vue 2 & Vue 3).
 </p>
 <p align="center">
   <a href="https://codepen.io/tutsplus/pen/ZKpNwm" target="_blank">Inspiration</a>
