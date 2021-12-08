@@ -6,26 +6,26 @@
           v-for="(item, i) in items"
           :key="i"
           :style="setLineColor"
-          :class="[{'add-step': $scopedSlots.default || item[titleAttr] || item[contentAttr]}, item.stepCssClass]"
+          :class="[{'add-step': hasSlot || item[titleAttr] || item[contentAttr]}, item.stepCssClass]"
         >
           <div
-            v-if="$scopedSlots.default || item[titleAttr] || item[contentAttr]"
+            v-if="hasSlot || item[titleAttr] || item[contentAttr]"
             class="time"
             :class="[getTimeClass(item), item.boxCssClass]"
             :style="getTimeStyles" @click="cardClicked(item)"
           >
-            <slot v-if="$scopedSlots.default" v-bind:item="item" v-bind:index="i"/>
+            <slot v-if="hasSlot" v-bind:item="item" v-bind:index="i"/>
             <span
               class="title"
-              v-if="!$scopedSlots.default && item[titleAttr]"
+              v-if="!hasSlot && item[titleAttr]"
               :class="getTitleClasses">
-              {{ item[titleAttr] | textSubstr(titleSubstr) }}
+              {{ textSubstr(item[titleAttr], titleSubstr) }}
             </span>
             <span
               class="content"
-              v-if="!$scopedSlots.default && item[contentAttr]"
+              v-if="!hasSlot && item[contentAttr]"
               :class="getContentClasses">
-              {{ item[contentAttr] | textSubstr(contentSubstr) }}
+              {{ textSubstr(item[contentAttr], contentSubstr) }}
             </span>
           </div>
         </li>
@@ -108,12 +108,11 @@ export default {
       default: true
     }
   },
-  filters: {
-    textSubstr (value, qtd = 250, mask = '...') {
-      return value && value.length > qtd ? `${value.substring(0, qtd)}${mask}` : value
-    }
-  },
+  emits: ['click', 'update:itemSelected'],
   computed: {
+    hasSlot () {
+      return '$scopedSlots' in this && this.$scopedSlots?.default ? true : !!this.$slots?.default
+    },
     setTimelineStyles () {
       const { timelineBackground, timelinePadding } = this
       const styleObj = {}
@@ -158,6 +157,9 @@ export default {
     }
   },
   methods: {
+    textSubstr (value, qtd = 250, mask = '...') {
+      return value && value.length > qtd ? `${value.substring(0, qtd)}${mask}` : value
+    },
     cardClicked (item) {
       if (!this.clickable) {
         return
